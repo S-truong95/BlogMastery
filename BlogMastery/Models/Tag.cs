@@ -7,5 +7,18 @@ namespace BlogMastery.Models
 {
     public class Tag
     {
+        public string Name { get; set; }
+        public string Post { get; set; }
+
+        public Tag()
+        {
+
+        }
+
+        public Tag(string name, string post)
+        {
+            Name = name;
+            Post = post;
+        }
     }
 }
