@@ -7,5 +7,6 @@ namespace BlogMastery.Repository
 {
     public class GenreRepository
     {
+
     }
 }
