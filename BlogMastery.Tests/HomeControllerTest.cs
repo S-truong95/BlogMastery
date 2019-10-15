@@ -17,5 +17,6 @@ namespace BlogMastery.Tests
 
             Assert.IsType<ViewResult>(result);
         }
+
     }
 }
