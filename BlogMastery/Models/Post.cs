@@ -7,30 +7,32 @@ namespace BlogMastery.Models
 {
     public class Post
     {
+       public int Id { get; set; }
        public string Title { get; set; }
        public string Body { get; set; }
        public string Author { get; set; }
        public int PublishDate { get; set; }
-       public string Genre { get; set; }
-       public string Tag { get; set; }
 
+        public int GenreId { get; set; }
+        public Genre Genras { get; set; }
+        public int TagId { get; set; }
+        public Tag Tags { get; set; }
 
         public Post()
         {
 
         }
 
-        public Post(string title, string body, string author, int publishDate, string genre, string tag)
+        public Post(int id, string title, string body, string author, int publishDate, int genreId, int tagId)
         {
+            Id = id;
             Title = title;
             Body = body;
             Author = author;
             PublishDate = publishDate;
-            Genre = genre;
-            Tag = tag;
+            GenreId = genreId;
+            TagId = tagId;
         }
-    }
 
-   
-   
+    }   
 }
