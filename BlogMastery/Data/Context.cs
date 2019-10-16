@@ -29,13 +29,71 @@ namespace BlogMastery.Data
                new Post()
                {
                    Id = 1,
-                   Title = "the",
-                   Body = "if",
+                   Title = "Harry Potter",
+                   Body = "sorcerer",
                    Author = "Jk",
-                   PublishDate = 2,
-                   GenreId = 3,
-                   TagId = 4,
+                   PublishDate = 2/2/2002,
+                   GenreId = 1,
+                   TagId = 1
+               },
+               new Post()
+               {
+                   Id = 2,
+                   Title = "Notebook",
+                   Body = "Alzheimers",
+                   Author = "Ryan Gosling",
+                   PublishDate = 12/02/1991,
+                   GenreId = 2,
+                   TagId = 2
+               },
 
+               new Post()
+               {
+                   Id = 3,
+                   Title = "Matrix",
+                   Body = "if or",
+                   Author = "steven spielberg",
+                   PublishDate = 12 / 02 / 1991,
+                   GenreId = 1,
+                   TagId = 1
+               },
+
+               new Post()
+               {
+                   Id = 4,
+                   Title = "Transformers",
+                   Body = "Optimus Prime",
+                   Author = "steven spielberg",
+                   PublishDate = 12 / 02 / 1991,
+                   GenreId = 1,
+                   TagId = 1
+               });
+
+            modelBuilder.Entity<Genre>().HasData(
+                new Genre()
+                {
+                    Id = 1,
+                    Name = "Sci-fi",
+                },
+
+                new Genre()
+                {
+                    Id = 2,
+                    Name = "Romance"
+                  
+                });
+
+            modelBuilder.Entity<Tag>().HasData(
+               new Tag()
+               {
+                   Id = 1,
+                   Name = "sci-fi"
+               },
+
+               new Tag()
+               {
+                   Id = 2,
+                   Name = "Romance"
                });
         }
 
