@@ -4,10 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using BlogMastery.Models;
 using BlogMastery.Repository;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BlogMastery.Controllers
 {
-    public class PostController
+    public class PostController : Controller
     {
         IRepository<Post> postRepo;
 
@@ -17,11 +18,11 @@ namespace BlogMastery.Controllers
 
         }
 
-        //public ViewResult PostIndex()
-        //{
-        //    var model = postRepo.GetAll();
-        //    return View(model);
-        //}
+        public ViewResult PostIndex()
+        {
+            var model = postRepo.GetAll();
+            return View(model);
+        }
 
 
     }
