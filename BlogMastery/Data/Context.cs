@@ -53,7 +53,7 @@ namespace BlogMastery.Data
                    Title = "Matrix",
                    Body = "if or",
                    Author = "steven spielberg",
-                   PublishDate = 12 / 02 / 1991,
+                   PublishDate = 11 / 02 / 1991,
                    GenreId = 1,
                    TagId = 1
                },

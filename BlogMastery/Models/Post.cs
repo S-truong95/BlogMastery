@@ -13,10 +13,10 @@ namespace BlogMastery.Models
        public string Author { get; set; }
        public int PublishDate { get; set; }
 
-        public int GenreId { get; set; }
-        public Genre Genras { get; set; }
-        public int TagId { get; set; }
-        public Tag Tags { get; set; }
+        public virtual int GenreId { get; set; }
+        public virtual Genre Genres { get; set; }
+        public virtual int TagId { get; set; }
+        public virtual Tag Tags { get; set; }
 
         public Post()
         {
