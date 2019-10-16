@@ -23,13 +23,12 @@ namespace BlogMastery.Models
 
         }
 
-        public Post(int id, string title, string body, string author, int publishDate, int genreId, int tagId)
+        public Post(int id, string title, string body, string author,  int genreId, int tagId)
         {
             Id = id;
             Title = title;
             Body = body;
             Author = author;
-            PublishDate = publishDate;
             GenreId = genreId;
             TagId = tagId;
         }

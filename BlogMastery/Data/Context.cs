@@ -32,7 +32,6 @@ namespace BlogMastery.Data
                    Title = "Harry Potter",
                    Body = "sorcerer",
                    Author = "Jk",
-                   PublishDate = 2/2/2002,
                    GenreId = 1,
                    TagId = 1
                },
@@ -42,7 +41,6 @@ namespace BlogMastery.Data
                    Title = "Notebook",
                    Body = "Alzheimers",
                    Author = "Ryan Gosling",
-                   PublishDate = 12/02/1991,
                    GenreId = 2,
                    TagId = 2
                },
@@ -53,7 +51,6 @@ namespace BlogMastery.Data
                    Title = "Matrix",
                    Body = "if or",
                    Author = "steven spielberg",
-                   PublishDate = 11 / 02 / 1991,
                    GenreId = 1,
                    TagId = 1
                },
@@ -64,7 +61,6 @@ namespace BlogMastery.Data
                    Title = "Transformers",
                    Body = "Optimus Prime",
                    Author = "steven spielberg",
-                   PublishDate = 12 / 02 / 1991,
                    GenreId = 1,
                    TagId = 1
                });

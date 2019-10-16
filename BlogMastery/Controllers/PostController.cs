@@ -20,9 +20,8 @@ namespace BlogMastery.Controllers
 
         public ViewResult PostIndex()
         {
-            //var model = postRepo.GetAll();
-            //return View(model);
-            return View();
+            var model = postRepo.GetAll();
+            return View(model);
         }
 
 
