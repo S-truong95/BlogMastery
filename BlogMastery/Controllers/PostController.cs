@@ -24,5 +24,11 @@ namespace BlogMastery.Controllers
             return View(model);
         }
 
+        public ViewResult Details(int id)
+        {
+            var model = postRepo.GetById(id);
+
+            return View(model);
+        }
     }
 }

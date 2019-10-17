@@ -28,7 +28,7 @@ namespace BlogMastery.Repository
         }
 
 
-        public Post GetByID(int id)
+        public Post GetById(int id)
         {
             return db.Posts.SingleOrDefault(b => b.Id == id);
         }

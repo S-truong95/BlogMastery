@@ -14,9 +14,9 @@ namespace BlogMastery.Models
        public DateTime DateTime { get; set; }
 
         public virtual int GenreId { get; set; }
-        public virtual Genre Genres { get; set; }
+        public virtual Genre Genre { get; set; }
         public virtual int TagId { get; set; }
-        public virtual Tag Tags { get; set; }
+        public virtual Tag Tag { get; set; }
 
         public Post()
         {

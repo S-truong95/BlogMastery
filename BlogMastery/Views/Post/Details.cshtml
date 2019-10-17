@@ -1,4 +1,4 @@
-﻿
+﻿@model BlogMastery.Models.Post
 @{
     Layout = null;
 }
@@ -11,5 +11,16 @@
     <title>Details</title>
 </head>
 <body>
+    <div>
+        <p><span>@Model.Title</span></p>
+        <p>Author: <span>@Model.Author</span></p>
+        <p>Genre(s): <span>@Model.Genre.Name</span></p>
+        <p>Tag(s): <span>@Model.Tag.Name</span></p>
+        <p>Blog: <span>@Model.Body</span></p>
+        <p>Publish Date: <span>@Model.DateTime</span></p>
+
+        <p class="postindex"><a href="/Post/PostIndex/">Index</a></p>
+        <hr />
+    </div>
 </body>
 </html>
