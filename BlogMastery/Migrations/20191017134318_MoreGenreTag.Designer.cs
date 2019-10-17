@@ -4,14 +4,16 @@ using BlogMastery.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BlogMastery.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20191017134318_MoreGenreTag")]
+    partial class MoreGenreTag
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -68,10 +70,10 @@ namespace BlogMastery.Migrations
                     b.ToTable("Posts");
 
                     b.HasData(
-                        new { Id = 1, Author = "Jk", Body = "sorcerer", DateTime = new DateTime(2019, 10, 17, 12, 4, 17, 689, DateTimeKind.Local), GenreId = 1, TagId = 1, Title = "Harry Potter" },
-                        new { Id = 2, Author = "Ryan Gosling", Body = "Alzheimers", DateTime = new DateTime(2019, 10, 17, 12, 4, 17, 691, DateTimeKind.Local), GenreId = 2, TagId = 2, Title = "Notebook" },
-                        new { Id = 3, Author = "steven spielberg", Body = "if or", DateTime = new DateTime(2019, 10, 17, 12, 4, 17, 691, DateTimeKind.Local), GenreId = 1, TagId = 1, Title = "Matrix" },
-                        new { Id = 4, Author = "steven spielberg", Body = "Optimus Prime", DateTime = new DateTime(2019, 10, 17, 12, 4, 17, 691, DateTimeKind.Local), GenreId = 1, TagId = 1, Title = "Transformers" }
+                        new { Id = 1, Author = "Jk", Body = "sorcerer", DateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), GenreId = 1, TagId = 1, Title = "Harry Potter" },
+                        new { Id = 2, Author = "Ryan Gosling", Body = "Alzheimers", DateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), GenreId = 2, TagId = 2, Title = "Notebook" },
+                        new { Id = 3, Author = "steven spielberg", Body = "if or", DateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), GenreId = 1, TagId = 1, Title = "Matrix" },
+                        new { Id = 4, Author = "steven spielberg", Body = "Optimus Prime", DateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), GenreId = 1, TagId = 1, Title = "Transformers" }
                     );
                 });
 

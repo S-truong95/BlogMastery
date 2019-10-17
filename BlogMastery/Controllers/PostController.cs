@@ -30,5 +30,47 @@ namespace BlogMastery.Controllers
 
             return View(model);
         }
+
+        [HttpGet]
+        public ViewResult Create()
+        {
+            ViewBag.DateTIme = DateTime.Now;
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Post posts)
+        {
+            postRepo.Create(posts);
+            return RedirectToAction("PostIndex");
+        }
+
+
+        [HttpGet]
+        public ViewResult Delete(int id)
+        {
+            var model = postRepo.GetById(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(Post posts)
+        {
+            postRepo.Delete(posts);
+            return RedirectToAction("PostIndex");
+        }
+        [HttpGet]
+        public ViewResult Edit(int id)
+        {
+            var model = postRepo.GetById(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Post posts)
+        {
+            postRepo.Edit(posts);
+            return RedirectToAction("PostIndex");
+        }
     }
 }

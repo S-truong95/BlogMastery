@@ -9,5 +9,9 @@ namespace BlogMastery.Repository
     {
         IEnumerable<T> GetAll();
         T GetById(int id);
+        void Create(T obj);
+        void Delete(T obj);
+        void Edit(T obj);
+
     }
 }

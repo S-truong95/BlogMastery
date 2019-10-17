@@ -32,6 +32,7 @@ namespace BlogMastery.Data
                    Title = "Harry Potter",
                    Body = "sorcerer",
                    Author = "Jk",
+                   DateTime = DateTime.Now,
                    GenreId = 1,
                    TagId = 1
                },
@@ -41,6 +42,7 @@ namespace BlogMastery.Data
                    Title = "Notebook",
                    Body = "Alzheimers",
                    Author = "Ryan Gosling",
+                   DateTime = DateTime.Now,
                    GenreId = 2,
                    TagId = 2
                },
@@ -51,6 +53,7 @@ namespace BlogMastery.Data
                    Title = "Matrix",
                    Body = "if or",
                    Author = "steven spielberg",
+                   DateTime = DateTime.Now,
                    GenreId = 1,
                    TagId = 1
                },
@@ -61,6 +64,7 @@ namespace BlogMastery.Data
                    Title = "Transformers",
                    Body = "Optimus Prime",
                    Author = "steven spielberg",
+                   DateTime = DateTime.Now,
                    GenreId = 1,
                    TagId = 1
                });
@@ -77,19 +81,43 @@ namespace BlogMastery.Data
                     Id = 2,
                     Name = "Romance"
                   
+                },
+                
+                new Genre()
+                {
+                    Id = 3,
+                    Name = "Action"
+                },
+
+                new Genre()
+                {
+                    Id = 4,
+                    Name = "Fantasy"
                 });
 
             modelBuilder.Entity<Tag>().HasData(
                new Tag()
                {
                    Id = 1,
-                   Name = "sci-fi"
+                   Name = "Sci-fi"
                },
 
                new Tag()
                {
                    Id = 2,
                    Name = "Romance"
+               },
+
+               new Tag()
+               {
+                   Id = 3,
+                   Name = "Action"
+               },
+               
+               new Tag()
+               {
+                   Id = 4,
+                   Name = "Fantasy"
                });
         }
 
