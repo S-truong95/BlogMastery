@@ -13,15 +13,29 @@
 <body>
     <div>
 
-    <section id="Post">
-        @foreach (var post in Model)
-        {
+        <section id="Post">
+            @foreach (var post in Model)
+            {
 
-            <article>
-                <p><a href="/Post/Details/@post.Id">@post.Title</a></p>
-            </article>
-        }
-    </section>
+                <article>
+                    <p><a href="/Post/Details/@post.Id">@post.Title</a></p>
+                </article>
+                <div>
+                    <section id="Forms">
+                        <form action="/Post/Delete" method="get">
+                            <input type="submit" value="Add Delete" /><br>
+                        </form>
+                    </section>
+                </div>
+                <div>
+                    <section id="Forms">
+                        <form action="/Post/Edit" method="get">
+                            <input type="submit" value="Add Edit" /><br>
+                        </form>
+                    </section>
+                </div>
+            }
+        </section>
 
     <div>
         <section id="Forms">
