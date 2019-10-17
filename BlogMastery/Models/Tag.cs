@@ -10,18 +10,18 @@ namespace BlogMastery.Models
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public virtual ICollection<Post> Posts { get; set; }
+        public virtual IList<PostTag> PostTag { get; set; }
 
         public Tag()
         {
 
         }
 
-        public Tag(int id, string name, ICollection<Post> posts)
+        public Tag(int id, string name)
         {
             Id = id;
             Name = name;
-            Posts = posts;
+          
         }
     }
 }
