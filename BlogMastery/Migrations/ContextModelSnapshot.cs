@@ -65,8 +65,8 @@ namespace BlogMastery.Migrations
                     b.ToTable("Posts");
 
                     b.HasData(
-                        new { Id = 1, Body = "A sorcerer lost his parents and is taken in by his horrible aunt. The scorcerer's name is Harry Potter and he starts his new life with many adventures as he attends Hogwarts School of Witchcraft and Wizardry, learns how to perform magic and comes face to face with his archenemy, Lord Voldemort.", DateTime = new DateTime(2019, 10, 17, 17, 15, 48, 157, DateTimeKind.Local), GenreId = 4, Reviewer = "Jk Rowling", Title = "Harry Potter" },
-                        new { Id = 2, Body = "When Thor's evil brother, Loki, gains access to the unlimited power of the energy cube called the Tesseract, Nick Fury, director of S.H.I.E.L.D., initiates a superhero recruitment effort to defeat the unprecedented threat to Earth. Joining Fury's 'dream team' are Iron Man, Captain America, the Hulk, Thor, the Black Widow and Hawkeye.", DateTime = new DateTime(2019, 10, 17, 17, 15, 48, 159, DateTimeKind.Local), GenreId = 1, Reviewer = "Stan Lee", Title = "Avengers" }
+                        new { Id = 1, Body = "A sorcerer lost his parents and is taken in by his horrible aunt. The scorcerer's name is Harry Potter and he starts his new life with many adventures as he attends Hogwarts School of Witchcraft and Wizardry, learns how to perform magic and comes face to face with his archenemy, Lord Voldemort.", DateTime = new DateTime(2019, 10, 17, 18, 29, 40, 209, DateTimeKind.Local), GenreId = 4, Reviewer = "Jk Rowling", Title = "Harry Potter" },
+                        new { Id = 2, Body = "When Thor's evil brother, Loki, gains access to the unlimited power of the energy cube called the Tesseract, Nick Fury, director of S.H.I.E.L.D., initiates a superhero recruitment effort to defeat the unprecedented threat to Earth. Joining Fury's 'dream team' are Iron Man, Captain America, the Hulk, Thor, the Black Widow and Hawkeye.", DateTime = new DateTime(2019, 10, 17, 18, 29, 40, 211, DateTimeKind.Local), GenreId = 1, Reviewer = "Stan Lee", Title = "Avengers" }
                     );
                 });
 

@@ -30,7 +30,7 @@ namespace BlogMastery.Repository
 
         public Post GetById(int id)
         {
-            return db.Posts.SingleOrDefault(b => b.Id == id);
+            return db.Posts.SingleOrDefault(p => p.Id == id);
         }
 
         public void Create(Post posts)

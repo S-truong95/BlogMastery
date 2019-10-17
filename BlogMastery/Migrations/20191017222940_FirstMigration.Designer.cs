@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlogMastery.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20191016221944_FirstMigration")]
+    [Migration("20191017222940_FirstMigration")]
     partial class FirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -29,15 +29,18 @@ namespace BlogMastery.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<string>("Post");
-
                     b.HasKey("Id");
 
                     b.ToTable("Genres");
 
                     b.HasData(
                         new { Id = 1, Name = "Sci-fi" },
-                        new { Id = 2, Name = "Romance" }
+                        new { Id = 2, Name = "Romance" },
+                        new { Id = 3, Name = "Action" },
+                        new { Id = 4, Name = "Fantasy" },
+                        new { Id = 5, Name = "Horror" },
+                        new { Id = 6, Name = "Drama" },
+                        new { Id = 7, Name = "Comedy" }
                     );
                 });
 
@@ -47,15 +50,13 @@ namespace BlogMastery.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Author");
-
                     b.Property<string>("Body");
 
                     b.Property<DateTime>("DateTime");
 
                     b.Property<int>("GenreId");
 
-                    b.Property<int>("TagId");
+                    b.Property<string>("Reviewer");
 
                     b.Property<string>("Title");
 
@@ -63,15 +64,31 @@ namespace BlogMastery.Migrations
 
                     b.HasIndex("GenreId");
 
-                    b.HasIndex("TagId");
-
                     b.ToTable("Posts");
 
                     b.HasData(
-                        new { Id = 1, Author = "Jk", Body = "sorcerer", DateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), GenreId = 1, TagId = 1, Title = "Harry Potter" },
-                        new { Id = 2, Author = "Ryan Gosling", Body = "Alzheimers", DateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), GenreId = 2, TagId = 2, Title = "Notebook" },
-                        new { Id = 3, Author = "steven spielberg", Body = "if or", DateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), GenreId = 1, TagId = 1, Title = "Matrix" },
-                        new { Id = 4, Author = "steven spielberg", Body = "Optimus Prime", DateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), GenreId = 1, TagId = 1, Title = "Transformers" }
+                        new { Id = 1, Body = "A sorcerer lost his parents and is taken in by his horrible aunt. The scorcerer's name is Harry Potter and he starts his new life with many adventures as he attends Hogwarts School of Witchcraft and Wizardry, learns how to perform magic and comes face to face with his archenemy, Lord Voldemort.", DateTime = new DateTime(2019, 10, 17, 18, 29, 40, 209, DateTimeKind.Local), GenreId = 4, Reviewer = "Jk Rowling", Title = "Harry Potter" },
+                        new { Id = 2, Body = "When Thor's evil brother, Loki, gains access to the unlimited power of the energy cube called the Tesseract, Nick Fury, director of S.H.I.E.L.D., initiates a superhero recruitment effort to defeat the unprecedented threat to Earth. Joining Fury's 'dream team' are Iron Man, Captain America, the Hulk, Thor, the Black Widow and Hawkeye.", DateTime = new DateTime(2019, 10, 17, 18, 29, 40, 211, DateTimeKind.Local), GenreId = 1, Reviewer = "Stan Lee", Title = "Avengers" }
+                    );
+                });
+
+            modelBuilder.Entity("BlogMastery.Models.PostTag", b =>
+                {
+                    b.Property<int>("PostId");
+
+                    b.Property<int>("TagId");
+
+                    b.HasKey("PostId", "TagId");
+
+                    b.HasIndex("TagId");
+
+                    b.ToTable("PostTag");
+
+                    b.HasData(
+                        new { PostId = 1, TagId = 3 },
+                        new { PostId = 1, TagId = 4 },
+                        new { PostId = 2, TagId = 1 },
+                        new { PostId = 2, TagId = 3 }
                     );
                 });
 
@@ -83,27 +100,38 @@ namespace BlogMastery.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<string>("Post");
-
                     b.HasKey("Id");
 
                     b.ToTable("Tags");
 
                     b.HasData(
-                        new { Id = 1, Name = "sci-fi" },
-                        new { Id = 2, Name = "Romance" }
+                        new { Id = 1, Name = "Sci-fi" },
+                        new { Id = 2, Name = "Romance" },
+                        new { Id = 3, Name = "Action" },
+                        new { Id = 4, Name = "Fantasy" },
+                        new { Id = 5, Name = "Horror" },
+                        new { Id = 6, Name = "Drama" },
+                        new { Id = 7, Name = "Comedy" }
                     );
                 });
 
             modelBuilder.Entity("BlogMastery.Models.Post", b =>
                 {
-                    b.HasOne("BlogMastery.Models.Genre", "Genres")
+                    b.HasOne("BlogMastery.Models.Genre", "Genre")
                         .WithMany("Posts")
                         .HasForeignKey("GenreId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("BlogMastery.Models.PostTag", b =>
+                {
+                    b.HasOne("BlogMastery.Models.Post", "Posts")
+                        .WithMany("PostTag")
+                        .HasForeignKey("PostId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("BlogMastery.Models.Tag", "Tags")
-                        .WithMany("Posts")
+                        .WithMany("PostTag")
                         .HasForeignKey("TagId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });

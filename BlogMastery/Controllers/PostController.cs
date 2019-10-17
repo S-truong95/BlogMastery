@@ -10,23 +10,23 @@ namespace BlogMastery.Controllers
 {
     public class PostController : Controller
     {
-        IRepository<Post> postRepo;
+        IRepository<Post> postsRepo;
 
-        public PostController(IRepository<Post> postRepo)
+        public PostController(IRepository<Post> postsRepo)
         {
-            this.postRepo = postRepo;
+            this.postsRepo = postsRepo;
 
         }
 
-        public ViewResult PostIndex()
+        public ViewResult Index()
         {
-            var model = postRepo.GetAll();
+            var model = postsRepo.GetAll();
             return View(model);
         }
 
         public ViewResult Details(int id)
         {
-            var model = postRepo.GetById(id);
+            var model = postsRepo.GetById(id);
 
             return View(model);
         }
@@ -41,36 +41,36 @@ namespace BlogMastery.Controllers
         [HttpPost]
         public ActionResult Create(Post posts)
         {
-            postRepo.Create(posts);
-            return RedirectToAction("PostIndex");
+            postsRepo.Create(posts);
+            return RedirectToAction("Index");
         }
 
 
         [HttpGet]
         public ViewResult Delete(int id)
         {
-            var model = postRepo.GetById(id);
+            var model = postsRepo.GetById(id);
             return View(model);
         }
 
         [HttpPost]
         public ActionResult Delete(Post posts)
         {
-            postRepo.Delete(posts);
-            return RedirectToAction("PostIndex");
+            postsRepo.Delete(posts);
+            return RedirectToAction("Index");
         }
         [HttpGet]
         public ViewResult Edit(int id)
         {
-            var model = postRepo.GetById(id);
+            var model = postsRepo.GetById(id);
             return View(model);
         }
 
         [HttpPost]
         public ActionResult Edit(Post posts)
         {
-            postRepo.Edit(posts);
-            return RedirectToAction("PostIndex");
+            postsRepo.Edit(posts);
+            return RedirectToAction("Index");
         }
     }
 }

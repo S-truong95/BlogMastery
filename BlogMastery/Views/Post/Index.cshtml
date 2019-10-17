@@ -21,18 +21,18 @@
                     <p><a href="/Post/Details/@post.Id">@post.Title</a></p>
                 </article>
                 <div>
-                    <section id="Forms">
-                        <form action="/Post/Delete" method="get">
-                            <input type="submit" value="Add Delete" /><br>
+                    <article id="Forms">
+                        <form action="/Post/Delete/@post.Id" method="get">
+                            <input type="submit" value="Delete" /><br>
                         </form>
-                    </section>
+                    </article>
                 </div>
                 <div>
-                    <section id="Forms">
-                        <form action="/Post/Edit" method="get">
-                            <input type="submit" value="Add Edit" /><br>
+                    <article id="Forms">
+                        <form action="/Post/Edit/@post.Id" method="get">
+                            <input type="submit" value="Edit" /><br>
                         </form>
-                    </section>
+                    </article>
                 </div>
             }
         </section>
