@@ -11,7 +11,7 @@ namespace BlogMastery.Models
        public string Title { get; set; }
        public string Body { get; set; }
        public string Author { get; set; }
-       public int PublishDate { get; set; }
+       public DateTime DateTime { get; set; }
 
         public virtual int GenreId { get; set; }
         public virtual Genre Genres { get; set; }
@@ -23,12 +23,13 @@ namespace BlogMastery.Models
 
         }
 
-        public Post(int id, string title, string body, string author,  int genreId, int tagId)
+        public Post(int id, string title, string body, string author, DateTime dateTime, int genreId, int tagId)
         {
             Id = id;
             Title = title;
             Body = body;
             Author = author;
+            DateTime = dateTime;
             GenreId = genreId;
             TagId = tagId;
         }

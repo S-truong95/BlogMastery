@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BlogMastery.Migrations
 {
-    public partial class firstMigration : Migration
+    public partial class FirstMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -44,7 +45,7 @@ namespace BlogMastery.Migrations
                     Title = table.Column<string>(nullable: true),
                     Body = table.Column<string>(nullable: true),
                     Author = table.Column<string>(nullable: true),
-                    PublishDate = table.Column<int>(nullable: false),
+                    DateTime = table.Column<DateTime>(nullable: false),
                     GenreId = table.Column<int>(nullable: false),
                     TagId = table.Column<int>(nullable: false)
                 },
@@ -85,13 +86,13 @@ namespace BlogMastery.Migrations
 
             migrationBuilder.InsertData(
                 table: "Posts",
-                columns: new[] { "Id", "Author", "Body", "GenreId", "PublishDate", "TagId", "Title" },
+                columns: new[] { "Id", "Author", "Body", "DateTime", "GenreId", "TagId", "Title" },
                 values: new object[,]
                 {
-                    { 1, "Jk", "sorcerer", 1, 0, 1, "Harry Potter" },
-                    { 3, "steven spielberg", "if or", 1, 0, 1, "Matrix" },
-                    { 4, "steven spielberg", "Optimus Prime", 1, 0, 1, "Transformers" },
-                    { 2, "Ryan Gosling", "Alzheimers", 2, 0, 2, "Notebook" }
+                    { 1, "Jk", "sorcerer", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, 1, "Harry Potter" },
+                    { 3, "steven spielberg", "if or", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, 1, "Matrix" },
+                    { 4, "steven spielberg", "Optimus Prime", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, 1, "Transformers" },
+                    { 2, "Ryan Gosling", "Alzheimers", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, 2, "Notebook" }
                 });
 
             migrationBuilder.CreateIndex(

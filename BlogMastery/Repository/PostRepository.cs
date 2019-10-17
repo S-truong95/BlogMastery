@@ -11,19 +11,26 @@ namespace BlogMastery.Repository
     {
         private Context db;
 
+        public PostRepository(Context db)
+        {
+            this.db = db;
+        }
+
+        public int Count()
+        {
+            return db.Posts.Count();
+        }
+
+
         public IEnumerable<Post> GetAll()
         {
-            return db.Posts.ToList();
+            return db.Posts;
         }
+
 
         public Post GetByID(int id)
         {
-            return db.Posts.Single(p => p.Id == id);
-        }
-
-        public IEnumerable<Post> GetByProductID(int id)
-        {
-            throw new NotImplementedException();
+            return db.Posts.SingleOrDefault(b => b.Id == id);
         }
     }
 }

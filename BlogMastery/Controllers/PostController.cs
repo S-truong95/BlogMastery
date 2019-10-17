@@ -24,6 +24,5 @@ namespace BlogMastery.Controllers
             return View(model);
         }
 
-
     }
 }

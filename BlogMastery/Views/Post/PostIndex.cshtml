@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<BlogMastery.Models.Post>
 @{
     Layout = null;
 }
@@ -11,5 +11,19 @@
     <title>PostIndex</title>
 </head>
 <body>
+    <div>
+
+    <section id="Post">
+        @foreach (var post in Model)
+        {
+
+            <article>
+                <p><a href="/Post/Details/@post.Id">@post.Title</a></p>
+            </article>
+        }
+    </section>
+
+
+    </div>
 </body>
 </html>
