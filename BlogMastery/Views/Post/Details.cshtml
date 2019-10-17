@@ -15,7 +15,11 @@
         <p><span>@Model.Title</span></p>
         <p>Author: <span>@Model.Reviewer</span></p>
         <p>Genre(s): <span>@Model.Genre.Name</span></p>
-        <p>Tag(s): <span>@Model.PostTag</span></p>
+        @foreach (var tag in Model.PostTag)
+        {
+            <p>Tags: @tag.Tags.Name</p>
+
+        }
         <p>Blog: <span>@Model.Body</span></p>
         <p>Publish Date: <span>@Model.DateTime</span></p>
 

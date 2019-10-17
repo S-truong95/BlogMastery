@@ -137,18 +137,7 @@ namespace BlogMastery.Data
                 });
 
             modelBuilder.Entity<PostTag>().HasData(
-                 new PostTag()
-                 {
-                     PostId = 1,
-                     TagId = 1,
-                 },
-
-                 new PostTag()
-                 {
-                     PostId = 1,
-                     TagId = 2,
-                 },
-
+                
                  new PostTag()
                  {
                      PostId = 1,
@@ -160,23 +149,7 @@ namespace BlogMastery.Data
                      PostId = 1,
                      TagId = 4,
                  },
-                 new PostTag()
-                 {
-                     PostId = 1,
-                     TagId = 5,
-                 },
-
-                 new PostTag()
-                 {
-                     PostId = 1,
-                     TagId = 6,
-                 },
-                 new PostTag()
-                 {
-                     PostId = 1,
-                     TagId = 7,
-                 },
-
+               
                  new PostTag()
                  {
                      PostId = 2,
@@ -186,35 +159,9 @@ namespace BlogMastery.Data
                  new PostTag()
                  {
                      PostId = 2,
-                     TagId = 2,
-                 },
-                 new PostTag()
-                 {
-                     PostId = 2,
                      TagId = 3,
-                 },
-
-                 new PostTag()
-                 {
-                     PostId = 2,
-                     TagId = 4,
-                 },
-                 new PostTag()
-                 {
-                     PostId = 2,
-                     TagId = 5,
-                 },
-
-                 new PostTag()
-                 {
-                     PostId = 2,
-                     TagId = 6,
-                 },
-                 new PostTag()
-                 {
-                     PostId = 2,
-                     TagId = 7,
                  });
+
             base.OnModelCreating(modelBuilder);
         }
 
