@@ -15,12 +15,12 @@
     <h1>Genres</h1>
     <div>
 
-        <section>
+        <section >
             @foreach (var genre in Model)
             {
 
                 <article>
-                    <p><a href="/Post/Details/@genre.Id">@genre.Name</a></p>
+                    <p><a href="/Post/Details">@genre.Name</a></p>
                 </article>
             }
         </section>
