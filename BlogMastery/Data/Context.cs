@@ -32,7 +32,7 @@ namespace BlogMastery.Data
                new Post()
                {
                    Id = 1,
-                   Title = "Harry Potter",
+                   Title = "Harry Potter And The Sorcerers Stone",
                    Body = "A sorcerer lost his parents and is taken in by his horrible aunt. The scorcerer's name is Harry Potter and he starts his new life with many adventures as he attends Hogwarts School of Witchcraft and Wizardry, learns how to perform magic and comes face to face with his archenemy, Lord Voldemort.",
                    Reviewer = "Jk Rowling",
                    DateTime = DateTime.Now,
