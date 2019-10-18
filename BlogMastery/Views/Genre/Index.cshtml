@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<BlogMastery.Models.Genre>
 @{
     Layout = null;
 }
@@ -9,7 +9,28 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+
 </head>
 <body>
+    <h1>Genres</h1>
+    <div>
+
+        <section>
+            @foreach (var genre in Model)
+            {
+
+                <article>
+                    <p><a href="/Post/Details/@genre.Id">@genre.Name</a></p>
+                </article>
+            }
+        </section>
+
+
+    </div>
+    <nav>
+        <a href="/Post/Index">Blog Index</a>
+        <a href="/Tag/Index">Tag Index</a>
+        <a href="/Genre/Index">Genre Index</a>
+    </nav>
 </body>
 </html>
