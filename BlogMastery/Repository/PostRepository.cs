@@ -28,9 +28,32 @@ namespace BlogMastery.Repository
         }
 
 
-        public Post GetByID(int id)
+        public Post GetById(int id)
         {
-            return db.Posts.SingleOrDefault(b => b.Id == id);
+            return db.Posts.SingleOrDefault(p => p.Id == id);
+        }
+
+        public void Create(Post posts)
+        {
+            db.Posts.Add(posts);
+            db.SaveChanges();
+        }
+
+        public void Delete(Post posts)
+        {
+            db.Posts.Remove(posts);
+            db.SaveChanges();
+        }
+
+        public void Edit(Post posts)
+        {
+            db.Posts.Update(posts);
+            db.SaveChanges();
+        }
+
+        public void Save()
+        {
+            db.SaveChanges();
         }
     }
 }
