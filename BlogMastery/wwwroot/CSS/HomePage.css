@@ -1,0 +1,31 @@
+﻿body{
+    display:grid;
+    background-image:url(/Images/movie.jpg);
+    background-size:cover;
+    font-family:sans-serif;
+    color:whitesmoke;
+    text-align:center;  
+    padding:2em;
+}
+
+footer {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    background: black;
+    padding: 1em;
+    text-align: center;
+}
+
+.one :visited{
+    color:whitesmoke;
+}
+
+.one :link{
+    color:whitesmoke
+}
+
+.one :hover{
+    color:darkred;
+}
+
+
