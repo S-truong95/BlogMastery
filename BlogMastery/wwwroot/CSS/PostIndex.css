@@ -1,0 +1,30 @@
+﻿
+body {
+    display: grid;
+    background-image: url(/Images/movie.jpg);
+    background-size: cover;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    text-align: center;
+    padding: 2em;
+}
+
+.two{
+    display:grid;
+    background-image:url(/Images/film.jpg);
+    padding: 1em;
+    margin:1em;
+    margin-left:15em;
+    margin-right:15em;
+    border-radius:3em;
+    
+}
+.one :visited{
+    color:Highlight;
+}
+.one{
+    font-size:2rem;
+}
+
+
