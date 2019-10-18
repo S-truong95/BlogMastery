@@ -23,6 +23,7 @@ namespace BlogMastery.Tests
 
             Assert.Equal("title", result);
         }
+
         [Fact]
         public void PostContructor_Sets_Body()
         {
@@ -30,6 +31,7 @@ namespace BlogMastery.Tests
 
             Assert.Equal("body", result);
         }
+
         [Fact]
         public void PostContructor_Sets_Reviewer()
         {
@@ -37,13 +39,7 @@ namespace BlogMastery.Tests
 
             Assert.Equal("reviewer", result);
         }
-        [Fact]
-        public void PostContructor_Sets_DateTime()
-        {
-            var result = posttest.DateTime;
-
-            Assert.Equal(dateTime, result);
-        }
+        
         [Fact]
         public void PostContructor_Sets_GenreId()
         {
