@@ -21,17 +21,17 @@ namespace BlogMastery.Repository
             return db.Genres.Count();
         }
 
-        public void Create(Genre obj)
+        public void Create(Genre genre)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(Genre obj)
+        public void Delete(Genre genre)
         {
             throw new NotImplementedException();
         }
 
-        public void Edit(Genre obj)
+        public void Edit(Genre genre)
         {
             throw new NotImplementedException();
         }

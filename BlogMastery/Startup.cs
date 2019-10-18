@@ -21,6 +21,8 @@ namespace BlogMastery
             services.AddMvc();
             services.AddDbContext<Context>();
             services.AddScoped<IRepository<Post>, PostRepository>();
+            services.AddScoped<IRepository<Genre>, GenreRepository>();
+            services.AddScoped<IRepository<Tag>, TagRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
