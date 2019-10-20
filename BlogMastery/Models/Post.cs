@@ -23,7 +23,7 @@ namespace BlogMastery.Models
 
         }
 
-        public Post(int id, string title, string body, string reviewer, DateTime dateTime, int genreId, IList<PostTag> postTags)
+        public Post(int id, string title, string body, string reviewer, DateTime dateTime, int genreId, IList<PostTag> postTag)
         {
             Id = id;
             Title = title;
@@ -31,7 +31,7 @@ namespace BlogMastery.Models
             Reviewer = reviewer;
             DateTime = dateTime;
             GenreId = genreId;
-            PostTag = postTags;
+            PostTag = postTag;
         }
 
     }   
