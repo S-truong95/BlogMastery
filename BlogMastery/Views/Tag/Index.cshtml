@@ -10,8 +10,14 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="~/CSS/Deletet.css" />
 </head>
 <body>
+    <nav >
+        <a href="/Post/Index">Blog Index</a>
+        <a href="/Tag/Index">Tag Index</a>
+        <a href="/Genre/Index">Genre Index</a>
+    </nav>
     <h1>Tags</h1>
     <div>
 
@@ -20,18 +26,13 @@
             {
 
                 <article>
-                    <p><a href="/Post/Details/@tag.Id">@tag.Name</a></p>
+                    <p class="one"><a href="/Post/Details/@tag.Id">@tag.Name</a></p>
                 </article>
             }
         </section>
-        <p class="Home"><a href="/Home/Index/">Return Home</a></p>
+        <p class="one"><a href="/Home/Index/">Return Home</a></p>
 
 
     </div>
-    <nav>
-        <a href="/Post/Index">Blog Index</a>
-        <a href="/Tag/Index">Tag Index</a>
-        <a href="/Genre/Index">Genre Index</a>
-    </nav>
 </body>
 </html>

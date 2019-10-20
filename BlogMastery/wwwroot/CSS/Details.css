@@ -1,0 +1,10 @@
+﻿body {
+    background-image:url(/Images/movie.jpg);
+    font-family:sans-serif;
+    font-size:2rem;
+    color:whitesmoke;
+}
+
+.one :visited{
+    color:gold;
+}

@@ -1,6 +1,6 @@
 ﻿
 body {
-    display: grid;
+  
     background-image: url(/Images/movie.jpg);
     background-size: cover;
     font-family: sans-serif;
@@ -11,8 +11,8 @@ body {
 }
 
 .two{
-    display:grid;
-    background-image:url(/Images/film.jpg);
+  
+    background-image:url(/Images/images.jpg);
     padding: 1em;
     margin:1em;
     margin-left:15em;
@@ -20,11 +20,27 @@ body {
     border-radius:3em;
     
 }
+
 .one :visited{
-    color:Highlight;
+    color:gold;
 }
+
 .one{
     font-size:2rem;
 }
 
+.one{
+    color:gold;
+}
+
+nav :link{
+    color:gold;
+}
+
+nav :visited{
+    color:gold;
+}
+nav {
+    background-image: url(/Images/images.jpg);
+}
 

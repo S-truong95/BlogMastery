@@ -6,24 +6,26 @@
     font-size:1.5rem;
     color:whitesmoke;
     text-align:center;  
-    padding:2em;
+  
 }
 
 footer {
     margin-top: 8em;
     margin-bottom: 1em;
-    background: black;
-    padding: 1em;
+    background-image:url(/Images/images.jpg);
+    padding: 0.8em;
     text-align: center;
     font-size:0.8rem;
+    color:gold;
+    border-radius:1em;
 }
 
 .one :visited{
-    color:dodgerblue;
+    color:gold;
 }
 
 .one :link{
-    color:whitesmoke
+    color:gold;
 }
 
 .one :hover{
@@ -32,6 +34,24 @@ footer {
 
 h1{
     font-size:3rem;
+}
+
+.bar :visited {
+    color: gold;
+}
+
+.bar :link{
+    font-size: 1.5rem;
+    color:gold;
+}
+
+.bar :hover{
+    color:darkred;;
+}
+
+.bar{
+    background-image:url(/Images/images.jpg); 
+    border-radius:1em;
 }
 
 
