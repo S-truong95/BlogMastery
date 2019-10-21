@@ -20,7 +20,9 @@
         <p>Genre(s): <span class="one"> <a href="/Genre/Index">@Model.Genre.Name</a></span></p>
         @foreach (var tag in Model.PostTag)
         {
+
         <p class="one">Tags:<a href="/Tag/Index"> @tag.Tags.Name</a></p>
+
 
         }
         <p>Blog: <span>@Model.Body</span></p>
