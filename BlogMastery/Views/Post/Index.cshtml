@@ -1,0 +1,70 @@
+﻿@model IEnumerable<BlogMastery.Models.Post>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PostIndex</title>
+    <link rel="stylesheet" type="text/css" href="~/CSS/PostIndex.css" />
+</head>
+<body>
+    <nav>
+        <a href="/Post/Index">Blog Index</a>
+        <a href="/Tag/Index">Tag Index</a>
+        <a href="/Genre/Index">Genre Index</a>
+    </nav>
+    <div>
+
+        <section id="Post">
+            @foreach (var post in Model)
+            {
+            <div class="two">
+                <article>
+                    <p class="one"><a href="/Post/Details/@post.Id">@post.Title</a></p>
+                </article>
+                <div>
+                    <article id="Forms">
+                        <form action="/Post/Delete/@post.Id" method="get">
+                            <input type="submit" value="Delete" /><br>
+                        </form>
+                    </article>
+                </div>
+                <div>
+                    <article id="Forms">
+                        <form action="/Post/Edit/@post.Id" method="get">
+                            <input type="submit" value="Edit" /><br>
+                        </form>
+                    </article>
+                </div>
+            </div>
+            }
+        </section>
+
+
+    <div>
+        <section id="Forms">
+            <form action="/Post/Create" method="get">
+                <p>click the link below to add a new movie to the blog</p>
+                <input type="submit" value="Add a new post" /><br>
+            </form>
+        </section>
+    </div>
+
+        
+    </div>
+
+    <footer></footer>
+
+    <nav>
+        <a href="/Home/Index">Home</a>
+        <a href="/Post/Index">Blog Index</a>
+        <a href="/Tag/Index">Tag Index</a>
+        <a href="/Genre/Index">Genre Index</a>
+    </nav>
+
+</body>
+</html>

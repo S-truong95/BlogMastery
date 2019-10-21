@@ -1,0 +1,36 @@
+﻿@model BlogMastery.Models.Post
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <link rel="stylesheet" type="text/css" href="~/CSS/Details.css" />
+</head>
+<body>
+    <div>
+        <p><span>@Model.Title</span></p>
+        <p>Reviewer: <span>@Model.Reviewer</span></p>
+        <p>Genre(s): <span class="one"> <a href="/Genre/Index">@Model.Genre.Name</a></span></p>
+        @foreach (var tag in Model.PostTag)
+        {
+
+        <p class="one">Tags:<a href="/Tag/Index"> @tag.Tags.Name</a></p>
+
+
+        }
+        <p>Blog: <span>@Model.Body</span></p>
+        <p>Publish Date: <span>@Model.DateTime</span></p>
+
+        <p class="one"><a href="/Post/Index/">Index</a></p>
+
+        <hr />
+    </div>
+</body>
+</html>

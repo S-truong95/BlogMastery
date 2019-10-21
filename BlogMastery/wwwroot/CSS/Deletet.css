@@ -1,0 +1,35 @@
+﻿body {
+    background-image:url(/Images/movie.jpg);
+    color:gold;
+    font-family:sans-serif;
+}
+
+.one :link{
+    color:gold;
+}
+
+.one :visited{
+    color:gold;
+}
+
+.one :hover{
+    color:darkred;
+}
+
+nav :link {
+    color: gold;
+}
+
+nav :visited {
+    color: gold;
+}
+
+nav {
+    background-image: url(/Images/images.jpg);
+}
+
+nav :hover{
+    color:darkred;
+}
+
+

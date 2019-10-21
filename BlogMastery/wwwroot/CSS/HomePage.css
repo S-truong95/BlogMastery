@@ -1,0 +1,57 @@
+﻿body{
+    display:grid;
+    background-image:url(/Images/movie.jpg);
+    background-size:cover;
+    font-family:sans-serif;
+    font-size:1.5rem;
+    color:whitesmoke;
+    text-align:center;  
+  
+}
+
+footer {
+    margin-top: 8em;
+    margin-bottom: 1em;
+    background-image:url(/Images/images.jpg);
+    padding: 0.8em;
+    text-align: center;
+    font-size:0.8rem;
+    color:gold;
+    border-radius:1em;
+}
+
+.one :visited{
+    color:gold;
+}
+
+.one :link{
+    color:gold;
+}
+
+.one :hover{
+    color:darkred;
+}
+
+h1{
+    font-size:3rem;
+}
+
+.bar :visited {
+    color: gold;
+}
+
+.bar :link{
+    font-size: 1.5rem;
+    color:gold;
+}
+
+.bar :hover{
+    color:darkred;;
+}
+
+.bar{
+    background-image:url(/Images/images.jpg); 
+    border-radius:1em;
+}
+
+
